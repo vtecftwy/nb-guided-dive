@@ -18,6 +18,7 @@ import shutil
 from jmd_imagescraper.core import duckduckgo_search
 from jmd_imagescraper.imagecleaner import display_image_cleaner
 from pathlib import Path
+from PIL import Image
 
 # from pandas.api.types import CategoricalDtype
 # from scipy.cluster import hierarchy as hc
@@ -39,7 +40,7 @@ print('import and configurations finished')
 
 # %% ../01_imports.ipynb 7
 def gv(code=None): 
-    if s is None:
+    if code is None:
         code = '''ordering=in
             problem[shape=cds width=1 height=1 label="1\nFrame business problem \ninto a ML problem"]
             data[shape=cylinder width=1 height=1 label="2\nCollect, and prepare \ndata, incl. labeling"]
