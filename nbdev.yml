@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "nb-guided-dive"
+  site-url: "https://vtecftwy.github.io/nb-guided-dive"
+  description: "Package to make it easier for people with limited code experience to run guided guide jupyter notebooks"
+  repo-branch: main
+  repo-url: "https://github.com/vtecftwy/nb-guided-dive"
