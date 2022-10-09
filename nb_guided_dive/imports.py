@@ -26,16 +26,14 @@ from pathlib import Path
 mpl.rcParams['savefig.dpi']= 200
 mpl.rcParams['font.size']=12
 
-set_seed(88)
+# set_seed(88)
 
-torch.backends.cudnn.deterministic = True
-torch.backends.cudnn.benchmark = False
-torch.set_printoptions(linewidth=200)
+# torch.backends.cudnn.deterministic = True
+# torch.backends.cudnn.benchmark = False
+# torch.set_printoptions(linewidth=200)
 
 np.set_printoptions(linewidth=200)
 pd.set_option('display.max_columns',999)
-
-
 
 print('import and configurations finished')
 
