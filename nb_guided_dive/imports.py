@@ -4,7 +4,10 @@
 __all__ = ['config_fastai_for_colab', 'mount_gdrive', 'gv', 'clean_image_directory']
 
 # %% ../01_imports.ipynb 3
-__all__ = ['np', 'pd','shutil', 'Path', 'duckduckgo_search', 'display_image_cleaner', 'clean_image_directory', 'gv']
+__all__ = ['np', 'pd','shutil', 
+           'Path', 
+           'duckduckgo_search', 'display_image_cleaner', 'clean_image_directory', 'gv', 'config_fastai_for_colab'
+          ]
 
 # %% ../01_imports.ipynb 4
 import numpy as np
@@ -12,7 +15,9 @@ import pandas as pd
 import graphviz
 import matplotlib as mpl
 import shutil
+import torch
 
+from fastai.vision.all import set_seed
 from jmd_imagescraper.core import duckduckgo_search
 from jmd_imagescraper.imagecleaner import display_image_cleaner
 from pathlib import Path
@@ -51,7 +56,6 @@ def mount_gdrive(path_to_ds=None):
     except:
         print('This notebook should be run on Google Colab')
 
-
 # %% ../01_imports.ipynb 7
 def gv(code=None): 
     if code is None:
@@ -66,13 +70,16 @@ def gv(code=None):
         return graphviz.Source('digraph G{ rankdir="LR"' + code + '; }')
 
 # %% ../01_imports.ipynb 8
-def clean_image_directory(path):
+def clean_image_directory(path, verbose=False):
     def check_img(img):
         try: _ = Image.open(img)
         except Exception as e:
             img = str(img).replace(" ","\ ")
-            os.system(f"rm -f {img}");print(f"removing error img:{img}")
+            os.system(f"rm -f {img}");
+            print(f"removing error img:{img}")
 
     for cls in path.iterdir():
-        for img in cls.iterdir():
+        for i, img in enumerate(cls.iterdir()):
+            if verbose: print(i, end=' - ')
             check_img(img)
+            print('\n')
