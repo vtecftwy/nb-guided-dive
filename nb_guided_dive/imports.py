@@ -15,7 +15,6 @@ import graphviz
 import matplotlib as mpl
 import shutil
 
-from google.colab import drive
 from jmd_imagescraper.core import duckduckgo_search
 from jmd_imagescraper.imagecleaner import display_image_cleaner
 from pathlib import Path
