@@ -2,7 +2,7 @@
 
 # %% auto 0
 __all__ = ['imported_objects', 'mount_gdrive', 'config_fastai_for_colab', 'gv', 'ml_process', 'clean_image_directory',
-           'count_files']
+           'count_files', 'print_metrics']
 
 # %% ../01_imports.ipynb 3
 imported_objects  = ['np', 'pd','shutil', 'Path', 'duckduckgo_search', 'display_image_cleaner']
@@ -108,3 +108,19 @@ def count_files(path):
     for d in [d for d in path.iterdir() if d.is_dir()]:
         nb_img = len([f for f in d.iterdir() if f.is_file()])
         print(f"{nb_img:,d} in folder {d.name}")
+
+# %% ../01_imports.ipynb 10
+def print_metrics(cm):
+    """Print FP, FN, Accuracy, Precision  and Recall"""
+    nb_val_im = cm.sum()
+    true_nb_im_per_class = cm.sum(axis=1)
+    pred_nb_im_per_class = cm.sum(axis=0)
+
+    print(f"Accurate predictions:               {cm[0,0] + cm[1,1]:3d} out of {nb_val_im:,d} validation images") 
+    print(f"False Positive preds:               {cm[0,1]:3d} images classified as 'without_mask' but actually should be `with_mask`)")   
+    print(f"False Negative preds:               {cm[1,0]:3d} images classified as `with_mask` but actually should be `without_mask`)")
+    print()
+    print(f"Accuracy:                           {cm.diagonal().sum()/nb_val_im * 100:6.2f} %") 
+    print(f"Precision for 'without_mask' preds: {cm[1, 1]/pred_nb_im_per_class[1] * 100:6.2f} %")   
+    print(f"Recall for 'without_mask' preds:    {cm[1,1]/true_nb_im_per_class[1] * 100:6.2f} %")
+    
