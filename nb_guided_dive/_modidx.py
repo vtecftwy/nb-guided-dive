@@ -10,6 +10,7 @@ d = { 'settings': { 'branch': 'master',
                                                                                           'nb_guided_dive/imports.py'),
                                         'nb_guided_dive.imports.config_fastai_for_colab': ( 'imports.html#config_fastai_for_colab',
                                                                                             'nb_guided_dive/imports.py'),
+                                        'nb_guided_dive.imports.count_files': ('imports.html#count_files', 'nb_guided_dive/imports.py'),
                                         'nb_guided_dive.imports.gv': ('imports.html#gv', 'nb_guided_dive/imports.py'),
                                         'nb_guided_dive.imports.ml_process': ('imports.html#ml_process', 'nb_guided_dive/imports.py'),
                                         'nb_guided_dive.imports.mount_gdrive': ('imports.html#mount_gdrive', 'nb_guided_dive/imports.py')}}}
