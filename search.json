@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "nb-guided-dive",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "nb-guided-dive",
+    "section": "Install",
+    "text": "Install\npip install nb_guided_dive"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "nb-guided-dive",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2"
+  },
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nfoo\n\n foo ()"
+  },
+  {
+    "objectID": "vision.html",
+    "href": "vision.html",
+    "title": "Imports",
+    "section": "",
+    "text": "source\n\nmount_gdrive\n\n mount_gdrive (path_to_ds=None)\n\n\nsource\n\n\nconfig_fastai_for_colab\n\n config_fastai_for_colab (path_to_ds=None)\n\n\nsource\n\n\nml_process\n\n ml_process ()\n\n\nsource\n\n\ngv\n\n gv (code=None)\n\n\nsource\n\n\nclean_image_directory\n\n clean_image_directory (path, verbose=False)\n\n\nsource\n\n\ncount_files\n\n count_files (path)\n\nCount the number if files in the folder pointed as path, and its subfolders\n\nsource\n\n\nprint_metrics\n\n print_metrics (cm)\n\nPrint FP, FN, Accuracy, Precision and Recall"
+  }
+]
