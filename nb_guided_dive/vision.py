@@ -46,7 +46,7 @@ def mount_gdrive(path_to_ds=None):
         print('This notebook should be run on Google Colab')
 
 # %% ../01_vision.ipynb 6
-def config_fastai_for_colab():
+def config_fastai_for_colab(path_to_ds=None):
     
     warnings.filterwarnings('ignore')
     
@@ -67,7 +67,7 @@ def config_fastai_for_colab():
     pd.set_option('display.max_columns',999)
     
     # mount goggle gdrive
-    mount_gdrive()
+    mount_gdrive(path_to_ds)
 
 # %% ../01_vision.ipynb 7
 def gv(code=None): 
