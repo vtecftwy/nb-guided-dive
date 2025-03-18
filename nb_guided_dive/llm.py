@@ -22,6 +22,8 @@ import warnings
 from pathlib import Path
 from pprint import pprint
 
+from IPython.display import display, Markdown
+
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
