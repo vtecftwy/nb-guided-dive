@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nb-guided-dive"
+dynamic = ["version"]
+description = "Package to make it easier for people with limited code experience to run our guided guide jupyter notebooks"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "vtecftwy", email = "github@procurasia.com"}]
+keywords = ['nbdev', 'jupyter', 'notebook', 'python']
+classifiers = ["Natural Language :: English", "Intended Audience :: Developers", "Development Status :: 3 - Alpha", "Programming Language :: Python :: 3", "Programming Language :: Python :: 3 :: Only"]
+dependencies = ['fastai', 'graphviz', 'ddgs', 'jmd_imagescraper', 'matplotlib', 'numpy', 'pandas', 'pillow', 'scipy']
+
+[project.urls]
+Repository = "https://github.com/vtecftwy/nb-guided-dive"
+Documentation = "https://vtecftwy.github.io/nb-guided-dive"
+
+[project.entry-points.nbdev]
+nb_guided_dive = "nb_guided_dive._modidx:d"
+
+[tool.setuptools.dynamic]
+version = {attr = "nb_guided_dive.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["nb_guided_dive"]
+
+[tool.nbdev]
+nbs_path = 'nbs-dev'
+branch = 'master'
+recursive = false
+put_version_in_init = false
