@@ -37,7 +37,7 @@ from pandas.api.types import CategoricalDtype
 from scipy.cluster import hierarchy as hc
 
 # %% ../nbs-dev/01_vision.ipynb #61dae2e6
-def get_images(keywords, label, path, max_results=100, page=1, download_images=True):
+def get_images(keywords, label, path, max_results=100, page=1, skip_download=False):
     """Retrieve images from duck duck go search results based on a list of keywords"""
     results = DDGS().images(
         query=keywords,
@@ -56,7 +56,7 @@ def get_images(keywords, label, path, max_results=100, page=1, download_images=T
         print(f"Not images found for {keywords}")
     else:
         urls = [r['image'] for r in results]
-        if download_images:
+        if not skip_download:
             path2imgs = path / label
             print(f"Found {len(results)} images for label {label}. Downloading into {path2imgs.absolute()}")
             os.makedirs(path2imgs, exist_ok=True)
