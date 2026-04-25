@@ -6,7 +6,7 @@
 __all__ = ['imported_objects', 'get_images', 'clean_image_directory', 'count_files', 'print_metrics']
 
 # %% ../nbs-dev/01_vision.ipynb #c5879e28
-imported_objects  = ['np', 'pd','shutil', 'Path', 'ddgs', 'display_image_cleaner']
+imported_objects  = ['np', 'pd','shutil', 'Path', 'display_image_cleaner']
 try:
     __all__.extend(imported_objects)
 except:
