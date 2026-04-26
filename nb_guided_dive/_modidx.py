@@ -30,5 +30,4 @@ d = { 'settings': { 'branch': 'master',
             'nb_guided_dive.vision': { 'nb_guided_dive.vision.clean_image_directory': ( 'vision.html#clean_image_directory',
                                                                                         'nb_guided_dive/vision.py'),
                                        'nb_guided_dive.vision.count_files': ('vision.html#count_files', 'nb_guided_dive/vision.py'),
-                                       'nb_guided_dive.vision.get_images': ('vision.html#get_images', 'nb_guided_dive/vision.py'),
                                        'nb_guided_dive.vision.print_metrics': ('vision.html#print_metrics', 'nb_guided_dive/vision.py')}}}
