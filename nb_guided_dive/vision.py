@@ -40,6 +40,7 @@ def get_images(
     """Retrieve images search results based on a list of keywords"""
     def _ddgs_call():
         """Wrapper function to call to DDGS."""
+        # TODO: correct this and move Try Except clause into this function to avoid code repetition
         return DDGS().images(
             query=keywords,
             region="wt-wt",
