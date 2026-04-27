@@ -15,33 +15,29 @@ except:
 # %% ../nbs-dev/01_vision.ipynb #6f6e5bc9
 import numpy as np
 import pandas as pd
-import graphviz
 import matplotlib as mpl
 import os
-import shutil
-import subprocess
-import sys
-import torch
-import warnings
 import time
 
 from ddgs import DDGS
 from ddgs.exceptions import DDGSException, TimeoutException, RatelimitException
-from fastai.vision.all import set_seed
 from fastai.vision.utils import download_images
-from fastai.vision.widgets import ImagesCleaner , ImageClassifierCleaner
-from jmd_imagescraper.imagecleaner import display_image_cleaner
 from pathlib import Path
 from PIL import Image
-from .core import install_package, mount_gdrive, gv, ml_process, config_fastai_for_dive
-
-from pandas.api.types import CategoricalDtype
-from scipy.cluster import hierarchy as hc
+from .core import ml_process, config_fastai_for_dive
 
 # %% ../nbs-dev/01_vision.ipynb #1e64c3df
-def get_images(keywords, label, path, max_results=100, max_pages=15, skip_download=False):
+def get_images(
+    keywords:str,               # string of keywords/query to search for, e.g. "cat", "cat, not dog", "cat OR dog" 
+    label: str,                 # label to give to the images found for the keywords/query, e.g. "cat"    
+    path: str | Path,           # path where to download the images, e.g. "data/images"
+    max_results: int = 100,     # maximum number of images to download for the keywords
+    max_pages: int = 15,        # maximum number of search pages to go through to find the images for the keywords
+    skip_download: bool = False # if True, only print the urls of the images found without downloading them (for testing purposes)
+    ):
     """Retrieve images search results based on a list of keywords"""
     def _ddgs_call():
+        """Wrapper function to call to DDGS."""
         return DDGS().images(
             query=keywords,
             region="wt-wt",
@@ -96,7 +92,11 @@ def get_images(keywords, label, path, max_results=100, max_pages=15, skip_downlo
     print(f"Found {nb_imgs} images for label {label}")
 
 # %% ../nbs-dev/01_vision.ipynb #fb1f2c1d
-def clean_image_directory(path, verbose=False):
+def clean_image_directory(
+    path:Path,          # Path to the directory containing the images
+    verbose:bool=False  # if True, print the name of each image being checked and whether it is removed or not.
+    ):
+    """Remove corrupted images from a directory. If verbose is True, print the name of each image being checked and whether it is removed or not."""
     def check_img(img):
         try: _ = Image.open(img)
         except Exception as e:
@@ -112,7 +112,9 @@ def clean_image_directory(path, verbose=False):
             if verbose: print('\n')
 
 # %% ../nbs-dev/01_vision.ipynb #5b544ea9
-def count_files(path):
+def count_files(
+    path:str | Path,   # Path to the directory containing the images, or any directory to count the number of files in it and its subdirectories. 
+    ):
     """Count the number if files in the folder pointed as path, and its subfolders"""
     if isinstance(path, str): path = Path(path)
     nb_img = len([f for f in path.iterdir() if f.is_file()])
@@ -126,7 +128,11 @@ def count_files(path):
     return counts
 
 # %% ../nbs-dev/01_vision.ipynb #d41e68b2
-def print_metrics(cm, class_0='bad', class_1='good'):
+def print_metrics(
+    cm: np.ndarray,     # Confusion matrix as a 2D numpy array, where cm[i,j] is the number of images of class i predicted as class j. 
+    class_0:str='bad',  # Name for class 0
+    class_1:str='good'  # Name for class 1
+    ):
     """Print FP, FN, Accuracy, Precision  and Recall"""
     nb_val_im = cm.sum()
     true_nb_im_per_class = cm.sum(axis=1)
