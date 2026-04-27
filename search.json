@@ -1,0 +1,142 @@
+[
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "def mount_gdrive(\n    \n):\n\nMounts Google Drive to the colab environment when run on Google Colab\n\nmount_gdrive()\n\nNobebook is ran locally. No need to mount Google Drive. \n\n\n\n\n\n\n\ndef config_fastai_for_dive(\n    with_gdrive:bool=True, # if True, mount Google Drive to the colab environment when run on Google Colab\n):\n\nSetup the nbs environment for the guided dive notebooks. This includes:\n\nIgnoring warnings\nSetting matplotlib settings\nSetting fastai seed\nSetting pytorch settings\nSetting numpy and pandas settings\nMounting Google Drive (if on colab)\n\n\n\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nwith_gdrive\nbool\nTrue\nif True, mount Google Drive to the colab environment when run on Google Colab\n\n\n\n\n\n\nconfig_fastai_for_dive(with_gdrive=True)\n\nEnvironment configured successfully.\nNobebook is ran locally. No need to mount Google Drive. \n\n\n\nconfig_fastai_for_dive(with_gdrive=False)\n\nEnvironment configured successfully.\n\n\n\n\n\n\n\ndef install_package(\n    package_name:str, # The name of the package to install.\n):\n\nInstall a Python package using pip in the current Jupyter Notebook environment.\n\n\n\n\n\n\nType\nDetails\n\n\n\n\npackage_name\nstr\nThe name of the package to install.",
+    "crumbs": [
+      "core"
+    ]
+  },
+  {
+    "objectID": "core.html#environment-setup",
+    "href": "core.html#environment-setup",
+    "title": "core",
+    "section": "",
+    "text": "def mount_gdrive(\n    \n):\n\nMounts Google Drive to the colab environment when run on Google Colab\n\nmount_gdrive()\n\nNobebook is ran locally. No need to mount Google Drive. \n\n\n\n\n\n\n\ndef config_fastai_for_dive(\n    with_gdrive:bool=True, # if True, mount Google Drive to the colab environment when run on Google Colab\n):\n\nSetup the nbs environment for the guided dive notebooks. This includes:\n\nIgnoring warnings\nSetting matplotlib settings\nSetting fastai seed\nSetting pytorch settings\nSetting numpy and pandas settings\nMounting Google Drive (if on colab)\n\n\n\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nwith_gdrive\nbool\nTrue\nif True, mount Google Drive to the colab environment when run on Google Colab\n\n\n\n\n\n\nconfig_fastai_for_dive(with_gdrive=True)\n\nEnvironment configured successfully.\nNobebook is ran locally. No need to mount Google Drive. \n\n\n\nconfig_fastai_for_dive(with_gdrive=False)\n\nEnvironment configured successfully.\n\n\n\n\n\n\n\ndef install_package(\n    package_name:str, # The name of the package to install.\n):\n\nInstall a Python package using pip in the current Jupyter Notebook environment.\n\n\n\n\n\n\nType\nDetails\n\n\n\n\npackage_name\nstr\nThe name of the package to install.",
+    "crumbs": [
+      "core"
+    ]
+  },
+  {
+    "objectID": "core.html#utilities",
+    "href": "core.html#utilities",
+    "title": "core",
+    "section": "Utilities",
+    "text": "Utilities\n\n\nprintmd\n\ndef printmd(\n    text:str, # The markdown text to display.\n):\n\nCall self as a function.\n\nDocmentTbl(printmd)\n\n\n\n\n\nType\nDetails\n\n\n\n\ntext\nstr\nThe markdown text to display.\n\n\n\n\n\n\nprintmd(\"This is **markdown** text displayed using the `printmd` function.\")\n\nThis is markdown text displayed using the printmd function.\n\n\n\n\n\ncount_files\n\ndef count_files(\n    path:str | pathlib.Path, # Path to the directory containing the images, or any directory to count the number of files in it and its subdirectories.\n):\n\nCount the number if files in the folder pointed as path, and its subfolders\n\n\n\n\n\n\nType\nDetails\n\n\n\n\npath\nstr\npathlib.Path\n\n\n\n\n\n\np2images = Path('./data-dev')\ncount_files(p2images)\n\n1 in folder people\n0 in folder cat\n1 in folder buildings\n\n\n{'people': 1, 'cat': 0, 'buildings': 1}",
+    "crumbs": [
+      "core"
+    ]
+  },
+  {
+    "objectID": "core.html#graphical",
+    "href": "core.html#graphical",
+    "title": "core",
+    "section": "Graphical",
+    "text": "Graphical\n\n\nml_process\n\ndef ml_process(\n    \n):\n\nSetup a visual representation of the machine learning process using Graphviz.\n\nml_process()",
+    "crumbs": [
+      "core"
+    ]
+  },
+  {
+    "objectID": "llm.html",
+    "href": "llm.html",
+    "title": "llm",
+    "section": "",
+    "text": "List of all packages and objects which should be imported and accessible from the guided dive notebook",
+    "crumbs": [
+      "llm"
+    ]
+  },
+  {
+    "objectID": "llm.html#explore-modellearner",
+    "href": "llm.html#explore-modellearner",
+    "title": "llm",
+    "section": "Explore Model/Learner",
+    "text": "Explore Model/Learner\n\n\nall_layer_names\n\ndef all_layer_names(\n    m:Module, # Model/Learner to extract submodule names from\n):\n\nUtility functions to extract submodule names and objects from a model\n\n\n\nchildren_names\n\ndef children_names(\n    m:Module, # Model/Learner to extract submodule names from\n):\n\nCall self as a function.\n\n\n\nget_children\n\ndef get_children(\n    m:Module, # Model/Learner to extract submodule names from\n):\n\nCall self as a function.\n\n\n\nshow_parameters_shape\n\ndef show_parameters_shape(\n    m:Module, # Model/Learner to extract submodule names from\n):\n\nCall self as a function.",
+    "crumbs": [
+      "llm"
+    ]
+  },
+  {
+    "objectID": "llm.html#display-llm-results",
+    "href": "llm.html#display-llm-results",
+    "title": "llm",
+    "section": "Display LLM results",
+    "text": "Display LLM results\n\n\nprint_bert_results\n\ndef print_bert_results(\n    res\n):\n\nCall self as a function.\n\n\n\nprint_gpt2_results\n\ndef print_gpt2_results(\n    res\n):\n\nCall self as a function.",
+    "crumbs": [
+      "llm"
+    ]
+  },
+  {
+    "objectID": "llm.html#utilities",
+    "href": "llm.html#utilities",
+    "title": "llm",
+    "section": "Utilities",
+    "text": "Utilities\n\n\nclean_up\n\ndef clean_up(\n    args:VAR_POSITIONAL\n):\n\nCall self as a function.",
+    "crumbs": [
+      "llm"
+    ]
+  },
+  {
+    "objectID": "diffusion.html",
+    "href": "diffusion.html",
+    "title": "diffusion",
+    "section": "",
+    "text": "List of all packages and objects which should be imported and accessible from the guided dive notebook\n\nimport nbdev; nbdev.nbdev_export()",
+    "crumbs": [
+      "diffusion"
+    ]
+  },
+  {
+    "objectID": "tabular.html",
+    "href": "tabular.html",
+    "title": "tabular",
+    "section": "",
+    "text": "List of all packages and objects which should be imported and accessible from the guided dive notebook\n\nimport nbdev; nbdev.nbdev_export()",
+    "crumbs": [
+      "tabular"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "nb-guided-dive",
+    "section": "",
+    "text": "This package is a utility package used to make it easier for attendees to my guided dive workshop to run jupyter notebooks.\nIt will change with no notice, depending on the requirements of ongoing and planned workshops.",
+    "crumbs": [
+      "nb-guided-dive"
+    ]
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "nb-guided-dive",
+    "section": "Install",
+    "text": "Install\npip install -U git+https://github.com/vtecftwy/nb-guided-dive.git",
+    "crumbs": [
+      "nb-guided-dive"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "nb-guided-dive",
+    "section": "How to use",
+    "text": "How to use\nThe package is used in prepared jupyter notebooks used during workshops. It is typically not used independently.\nFeel free to fork and adapt to your needs, if you find a use for it.",
+    "crumbs": [
+      "nb-guided-dive"
+    ]
+  },
+  {
+    "objectID": "vision.html",
+    "href": "vision.html",
+    "title": "vision",
+    "section": "",
+    "text": "List of all packages and objects which should be imported and accessible from the guided dive notebook\n\n\nget_images\n\ndef get_images(\n    keywords:str, # string of keywords/query to search for, e.g. \"cat\", \"cat, not dog\", \"cat OR dog\"\n    label:str, # label to give to the images found for the keywords/query, e.g. \"cat\"\n    path:str | pathlib.Path, # path where to download the images, e.g. \"data/images\"\n    max_results:int=100, # maximum number of images to download for the keywords\n    max_pages:int=15, # maximum number of search pages to go through to find the images for the keywords\n    skip_download:bool=False, # if True, only print the urls of the images found without downloading them (for testing purposes)\n):\n\nRetrieve images search results based on a list of keywords\n\n\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nkeywords\nstr\n\nstring of keywords/query to search for, e.g. “cat”, “cat, not dog”, “cat OR dog”\n\n\nlabel\nstr\n\nlabel to give to the images found for the keywords/query, e.g. “cat”\n\n\npath\nstr\npathlib.Path\n\n\n\nmax_results\nint\n100\nmaximum number of images to download for the keywords\n\n\nmax_pages\nint\n15\nmaximum number of search pages to go through to find the images for the keywords\n\n\nskip_download\nbool\nFalse\nif True, only print the urls of the images found without downloading them (for testing purposes)\n\n\n\n\n\n\nget_images('cat', 'cat', Path('./data-dev'), max_results=10, skip_download=True);\n\nSearching for 10 images for cat (page 1). 0 images found so far...\nFound 10 images on search page 1. Downloading into /home/vtec/projects/ec-packages/nb-guided-dive/nbs-dev/data-dev/cat\nhttp://clubcatt.com/cdn/shop/articles/domestic-house-cat.png?v=1689444796\nhttps://cdn.animalhub.earth/images/animals/gamma/domestic-cat.webp\nhttps://cdn.animalhub.earth/images/animals/delta/domestic-cat.webp\nhttps://images.ctfassets.net/r208a72kad0m/MooSrKbLUDMOHCSMfMLO7/bb9694cc579f03383c322eb6488b81a0/Kattraser__1_.png\nhttps://completecatguide.com/wp-content/uploads/2025/06/domestic-shorthair-cat-1024x480.jpg\nhttps://dinoanimals.com/wp-content/uploads/2023/03/Domestic-cat-24.jpg\nhttps://static.wikia.nocookie.net/allspecies/images/0/0b/Cat_poster_1.jpg/revision/latest/scale-to-width-down/1200?cb=20201101203525\nhttps://c8.alamy.com/comp/2YP6KBX/domestic-cat-felis-catus-2YP6KBX.jpg\nhttps://c8.alamy.com/comp/2YWJ3CX/domestic-cat-felis-catus-2YWJ3CX.jpg\nhttps://c8.alamy.com/comp/2YTHMYK/domestic-cat-felis-catus-2YTHMYK.jpg\nAll results downloaded\nFound 10 images for label cat\n\n\n\npath = Path('./data-dev')\nlabel = 'cat'\nget_images(label, label, path, max_results=3, skip_download=False);\nprint('Downloaded images')\nfor p in (path/label).ls():\n    print('-', p)\n    p.unlink()\nprint('All images deleted')\n\nSearching for 3 images for cat (page 1). 0 images found so far...\nFound 3 images on search page 1. Downloading into /home/vtec/projects/ec-packages/nb-guided-dive/nbs-dev/data-dev/cat\nAll results downloaded\nFound 3 images for label cat\nDownloaded images\n- data-dev/cat/834a62ff-ee7e-481c-8e52-a90d539fd784.jpg\n- data-dev/cat/3c5c515f-f1f9-45da-a85c-b9bf55349f1e.jpg\n- data-dev/cat/013a839a-996a-4af4-8083-c9eadb32bf59.png\nAll images deleted\n\n\n&lt;unknown&gt;:9: SyntaxWarning: invalid escape sequence '\\ '\n\n\n\nclean_image_directory\n\ndef clean_image_directory(\n    path:Path, # Path to the directory containing the images\n    verbose:bool=False, # if True, print the name of each image being checked and whether it is removed or not.\n):\n\nRemove corrupted images from a directory. If verbose is True, print the name of each image being checked and whether it is removed or not.\n\n\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\npath\nPath\n\nPath to the directory containing the images\n\n\nverbose\nbool\nFalse\nif True, print the name of each image being checked and whether it is removed or not.\n\n\n\n\n\n\nclean_image_directory(Path('./data-dev'), verbose=True)\n\nChecking images for class 'people':\n1 - \n\nChecking images for class 'cat':\nChecking images for class 'buildings':\n1 - \n\n\n\n\n\n\ncount_files\n\ndef count_files(\n    path:str | pathlib.Path, # Path to the directory containing the images, or any directory to count the number of files in it and its subdirectories.\n):\n\nCount the number if files in the folder pointed as path, and its subfolders\n\n\n\n\n\n\nType\nDetails\n\n\n\n\npath\nstr\npathlib.Path\n\n\n\n\n\n\np2images = Path('./data-dev')\ncount_files(p2images)\n\n1 in folder people\n0 in folder cat\n1 in folder buildings\n\n\n{'people': 1, 'cat': 0, 'buildings': 1}\n\n\n\n\n\nprint_metrics\n\ndef print_metrics(\n    cm:ndarray, # Confusion matrix as a 2D numpy array, where cm[i,j] is the number of images of class i predicted as class j.\n    class_0:str='bad', # Name for class 0\n    class_1:str='good', # Name for class 1\n):\n\nPrint FP, FN, Accuracy, Precision and Recall\n\n\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\ncm\nndarray\n\nConfusion matrix as a 2D numpy array, where cm[i,j] is the number of images of class i predicted as class j.\n\n\nclass_0\nstr\nbad\nName for class 0\n\n\nclass_1\nstr\ngood\nName for class 1\n\n\n\n\n\n\ncm = np.array([[90, 10], [20, 80]])\nprint_metrics(cm)\n\nAccurate predictions:               170 out of 200 validation images\nFalse Positive preds:                10 images classified as `good` but actually should be `bad`)\nFalse Negative preds:                20 images classified as `bad` but actually should be `good`)\n\nAccuracy:                            85.00 %\nPrecision for good:                  88.89 %\nRecall for good:                     80.00 %",
+    "crumbs": [
+      "vision"
+    ]
+  }
+]
