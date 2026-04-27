@@ -17,10 +17,10 @@ from nbdev import showdoc
 from pathlib import Path
 from fastai.vision.all import set_seed
 
-import numpy as np
-import pandas as pd
 import graphviz
 import matplotlib as mpl
+import numpy as np
+import pandas as pd
 import os
 import shutil
 import subprocess

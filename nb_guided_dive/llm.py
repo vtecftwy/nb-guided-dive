@@ -6,7 +6,7 @@
 __all__ = ['imported_objects', 'all_layer_names']
 
 # %% ../nbs-dev/03_llm.ipynb #1a3369d4
-imported_objects  = ['np', 'pd', 'plt', 'Path', 'torch']
+imported_objects  = ['np', 'pd', 'plt', 'shutil', 'Path', 'torch']
 try:
     __all__.extend(imported_objects)
 except:
@@ -15,9 +15,6 @@ except:
 # %% ../nbs-dev/03_llm.ipynb #20b09a51
 import gc
 import shutil
-import subprocess
-import sys
-import warnings
 from pathlib import Path
 from pprint import pprint
 
@@ -28,7 +25,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import torch
-
 
 # %% ../nbs-dev/03_llm.ipynb #f7aa498f
 def all_layer_names(

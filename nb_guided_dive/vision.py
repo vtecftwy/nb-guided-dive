@@ -17,10 +17,12 @@ import numpy as np
 import pandas as pd
 import matplotlib as mpl
 import os
+import shutil
 import time
 
 from ddgs import DDGS
 from ddgs.exceptions import DDGSException, TimeoutException, RatelimitException
+from jmd_imagescraper.imagecleaner import display_image_cleaner
 from fastai.vision.utils import download_images
 from pathlib import Path
 from PIL import Image
