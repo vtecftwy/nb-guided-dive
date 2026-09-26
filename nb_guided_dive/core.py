@@ -14,7 +14,6 @@ except:
     __all__ = imported_objects
 
 # %% ../nbs-dev/00_core.ipynb #e5e042d7
-from nbdev import showdoc
 from pathlib import Path
 from fastai.vision.all import set_seed
 from IPython.display import display, Markdown
